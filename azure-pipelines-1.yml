@@ -13,7 +13,7 @@ variables:
   dockerRegistryServiceConnection: 'd5aeeb95-b025-435f-8c2c-5d1a7ad214e1'
   imageRepository: 'tsunderelanddavestestdockerrepo'
   containerRegistry: 'davestestdockerregistry.azurecr.io'
-  dockerfilePath: '$(Build.SourcesDirectory)/src/AngularApplication1/Dockerfile'
+  dockerfilePath: '$(Build.SourcesDirectory)/src/Dockerfile'
   tag: '$(Build.BuildId)'
 
   # Agent VM image name
