@@ -13,7 +13,7 @@ RUN apt-get update && apt-get upgrade -y && \
     apt-get install -y nodejs \
     npm                       # note this one
 
-RUN file="$(ls -1 /tmp/dir)" && echo $file
+RUN file="$(ls)" && echo $file
 COPY ["AngularApplication1/AngularApplication1.csproj", "AngularApplication1/"]
 #RUN dotnet restore "AngularApplication1/AngularApplication1.csproj"
 #COPY . .
