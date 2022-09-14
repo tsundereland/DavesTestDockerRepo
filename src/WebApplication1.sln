@@ -5,7 +5,12 @@ VisualStudioVersion = 17.3.32825.248
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{C64C5CDD-7952-401C-B680-43159162B0C4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularApplication1", "AngularApplication1\AngularApplication1.csproj", "{574E822C-8C76-4F7B-9498-0F470FE9C92F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AngularApplication1", "AngularApplication1\AngularApplication1.csproj", "{574E822C-8C76-4F7B-9498-0F470FE9C92F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1130D827-6C17-497D-A810-AEE67E8DAFA1}"
+	ProjectSection(SolutionItems) = preProject
+		Dockerfile = Dockerfile
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

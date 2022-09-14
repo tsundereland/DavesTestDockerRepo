@@ -13,8 +13,8 @@ RUN apt-get update && apt-get upgrade -y && \
     apt-get install -y nodejs \
     npm                       # note this one
 
-COPY ["AngularApplication1/tsconfig.json", "AngularApplication1/"]
-#COPY ["AngularApplication1/AngularApplication1.csproj", "AngularApplication1/"]
+RUN file="$(ls -1 /tmp/dir)" && echo $file
+COPY ["AngularApplication1/AngularApplication1.csproj", "AngularApplication1/"]
 #RUN dotnet restore "AngularApplication1/AngularApplication1.csproj"
 #COPY . .
 #WORKDIR "/src/AngularApplication1"
