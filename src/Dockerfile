@@ -13,16 +13,14 @@ RUN apt-get update && apt-get upgrade -y && \
     apt-get install -y nodejs \
     npm                       # note this one
 
-RUN file="$(ls)" && echo $file
-RUN file="$(ls)" && echo $file
 COPY ["AngularApplication1/AngularApplication1.csproj", "AngularApplication1/"]
-#RUN dotnet restore "AngularApplication1/AngularApplication1.csproj"
-#COPY . .
-#WORKDIR "/src/AngularApplication1"
-#RUN dotnet build "AngularApplication1.csproj" -c Release -o /app/build
+RUN dotnet restore "AngularApplication1/AngularApplication1.csproj"
+COPY . .
+WORKDIR "/src/AngularApplication1"
+RUN dotnet build "AngularApplication1.csproj" -c Release -o /app/build
 
-#FROM build AS publish
-#RUN dotnet publish "AngularApplication1.csproj" -c Release -o /app/publish /p:UseAppHost=false
+FROM build AS publish
+RUN dotnet publish "AngularApplication1.csproj" -c Release -o /app/publish /p:UseAppHost=false
 
 FROM base AS final
 WORKDIR /app
