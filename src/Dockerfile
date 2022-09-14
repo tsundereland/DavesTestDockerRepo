@@ -14,6 +14,7 @@ RUN apt-get update && apt-get upgrade -y && \
     npm                       # note this one
 
 RUN file="$(ls)" && echo $file
+RUN file="$(ls)" && echo $file
 COPY ["AngularApplication1/AngularApplication1.csproj", "AngularApplication1/"]
 #RUN dotnet restore "AngularApplication1/AngularApplication1.csproj"
 #COPY . .
